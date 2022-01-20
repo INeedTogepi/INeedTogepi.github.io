@@ -1051,7 +1051,7 @@ async function btnPasteItemsClick() {
 
   for (var i = 0; i < manageClipboard.length; i++) {
     pasteStatus.html("Adding video: " + manageClipboard[i] + " (" + (i + 1) + "/" + manageClipboard.length + ")");
-    rtn = await insertPlaylistItem(playlist, manageClipboard[i]);
+    setTimeout((rtn = await insertPlaylistItem(playlist, manageClipboard[i])), 2000);
     if (rtn !== undefined) {
       if (rtn.status !== 200) {
         errtext.html('<span style="color: yellow;">Error ' + rtn.result.error.code + ': ' + rtn.result.error.message + '</span><br>');
