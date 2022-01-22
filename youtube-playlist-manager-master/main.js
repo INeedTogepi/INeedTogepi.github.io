@@ -1065,7 +1065,7 @@ async function btnPasteItemsClick() {
           return;
         }
 	  },
-	3000);
+	3000)
   }
 
   // Finished
